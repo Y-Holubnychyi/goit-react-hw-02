@@ -1,4 +1,3 @@
-/* Контейнер для кнопок */
 .options {
   display: flex;
   gap: 20px;
@@ -17,7 +16,6 @@ button {
   margin: 5px;
 }
 
-/* Кнопка для позитивного відгуку */
 button:nth-child(1) {
   background-color: #4caf50;
   color: white;
@@ -28,7 +26,6 @@ button:nth-child(1):hover {
   transform: scale(1.1);
 }
 
-/* Кнопка для нейтрального відгуку */
 button:nth-child(2) {
   background-color: #ffeb3b;
   color: black;

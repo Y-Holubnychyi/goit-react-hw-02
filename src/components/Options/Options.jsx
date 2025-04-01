@@ -1,9 +1,9 @@
 import React from "react";
-import "./Options.module.css";
+import s from "./Options.module.css";
 
 const Options = ({ onLeaveFeedback, onReset, totalFeedback }) => {
   return (
-    <div сlassName="options">
+    <div className={s.options}>
       <button onClick={() => onLeaveFeedback("good")}>Good</button>
       <button onClick={() => onLeaveFeedback("neutral")}>Neutral</button>
       <button onClick={() => onLeaveFeedback("bad")}>Bad</button>
@@ -12,5 +12,4 @@ const Options = ({ onLeaveFeedback, onReset, totalFeedback }) => {
     </div>
   );
 };
-
 export default Options;

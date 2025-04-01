@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
-import Options from "./components/Options/Options";
+import Description from "./components/Description/Description";
 import Feedback from "./components/Feedback/Feedback";
+import Notification from "./components/Notification/Notification";
+import Options from "./components/Options/Options";
 import "./App.css";
 
 export default function App() {
@@ -36,18 +38,12 @@ export default function App() {
 
   return (
     <div>
-      <h1>Sip Happens Café</h1>
-      <p>
-        Please leave your feedback about our service by selecting one of the
-        options below.
-      </p>
-
+      <Description />
       <Options
         onLeaveFeedback={updateFeedback}
         onReset={resetFeedback}
         totalFeedback={totalFeedback}
       />
-
       {totalFeedback > 0 ? (
         <Feedback
           good={feedback.good}
@@ -57,7 +53,7 @@ export default function App() {
           positivePercentage={positivePercentage}
         />
       ) : (
-        <p>No feedback yet 😔</p>
+        <Notification />
       )}
     </div>
   );
